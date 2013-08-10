@@ -1,4 +1,4 @@
 node-nagger
 ===========
 
-Nag until the user to upgrade node to the latest version
+Force the user to run the latest node version (thru nagging)
