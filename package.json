@@ -1,0 +1,33 @@
+{
+  "name": "nagger",
+  "version": "1.0.0",
+  "description": "Force the user to run the latest node version (thru nagging)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feross/node-nagger.git"
+  },
+  "keywords": [
+    "nagger",
+    "node",
+    "version",
+    "version",
+    "version",
+    "check",
+    "latest",
+    "node",
+    "latest",
+    "version"
+  ],
+  "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/feross/node-nagger/issues"
+  },
+  "dependencies": {
+    "request": "~2.26.0"
+  }
+}
