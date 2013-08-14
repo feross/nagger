@@ -1,6 +1,6 @@
 {
   "name": "nagger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Force the user to run the latest node version (thru nagging)",
   "main": "index.js",
   "scripts": {
