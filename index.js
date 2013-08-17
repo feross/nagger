@@ -1,4 +1,5 @@
-var request = require('request')
+var concat = require('concat-stream')
+var http = require('http')
 
 /**
  * Detect if the installed Node version is the latest version. Warn if the
@@ -8,11 +9,9 @@ var request = require('request')
 var url = 'http://nodejs.org/dist/latest/SHASUMS.txt'
 var current = process.versions.node
 
-request.get(url, function (err, res, body) {
-  if (err) {
-    console.error('Nagger cannot connect to nodejs.org to get latest version.')
-  } else {
-    var latest = /node-v(\d+\.\d+\.\d+)/.exec(body)
+http.get(url)
+  .pipe(concat(function (data) {
+    var latest = /node-v(\d+\.\d+\.\d+)/.exec(data)
     if (latest) {
       if (latest[1] !== current) {
         console.log('===================================================')
@@ -21,7 +20,10 @@ request.get(url, function (err, res, body) {
         console.log('===================================================')
       }
     } else {
-      console.log('Nagger got unexpected response from nodejs.org. Are you on free wifi? Try logging in.')
+      console.log('Nagger: unexpected response from nodejs.org. Are you on free wifi?')
     }
-  }
-})
+  }))
+  .on('error', function (err) {
+    console.error('Nagger cannot connect to nodejs.org to get latest version.')
+    console.error(err)
+  })

@@ -28,6 +28,6 @@
     "url": "https://github.com/feross/node-nagger/issues"
   },
   "dependencies": {
-    "request": "~2.26.0"
+    "concat-stream": "*"
   }
 }
