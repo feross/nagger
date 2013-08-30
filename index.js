@@ -9,11 +9,16 @@ var http = require('http')
 var url = 'http://nodejs.org/dist/latest/SHASUMS.txt'
 var current = process.versions.node
 
-http.get(url)
-  .pipe(concat(function (data) {
-    var latest = /node-v(\d+\.\d+\.\d+)/.exec(data)
+http.get(url, function (res) {
+  var body = ''
+  res.on('data', function (chunk) {
+    body += chunk
+  })
+  res.on('end', function () {
+    var latest = /node-v(\d+\.\d+\.\d+)/.exec(body)
+    latest = latest && latest[1]
     if (latest) {
-      if (latest[1] !== current) {
+      if (latest !== current) {
         console.log('===================================================')
         console.log(' WARNING: Installed Node version is out-of-date!   ')
         console.log(' (Current: ' + current + ' Latest: ' + latest + ') ')
@@ -22,8 +27,9 @@ http.get(url)
     } else {
       console.log('Nagger: unexpected response from nodejs.org. Are you on free wifi?')
     }
-  }))
-  .on('error', function (err) {
-    console.error('Nagger cannot connect to nodejs.org to get latest version.')
-    console.error(err)
   })
+})
+.on('error', function (err) {
+  console.error('Nagger cannot connect to nodejs.org to get latest version.')
+  console.error(err)
+})
