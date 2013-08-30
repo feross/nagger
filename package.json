@@ -27,7 +27,5 @@
   "bugs": {
     "url": "https://github.com/feross/node-nagger/issues"
   },
-  "dependencies": {
-    "concat-stream": "*"
-  }
+  "dependencies": {}
 }
