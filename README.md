@@ -24,3 +24,7 @@ Prints out to the terminal:
 ```
 
 That's it!
+
+## License
+
+MIT
