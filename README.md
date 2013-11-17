@@ -1,7 +1,7 @@
-node-nagger
+nagger
 ===========
 
-Force the user to run the latest node version (thru nagging)
+Force the user to run the latest version of node.js (thru nagging)
 
 ## Installation
 
@@ -18,9 +18,13 @@ Prints out to the terminal:
 
 ```
 ===================================================
- WARNING: Installed Node version is out-of-date!   
- (Current: 0.10.14 Latest: 0.10.15) 
+ WARNING: Installed Node version is out-of-date!
+ (Current: 0.10.14 Latest: 0.10.15)
 ===================================================
 ```
 
 That's it!
+
+## License
+
+MIT
