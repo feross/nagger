@@ -14,13 +14,8 @@
     "nagger",
     "node",
     "version",
-    "version",
-    "version",
     "check",
-    "latest",
-    "node",
-    "latest",
-    "version"
+    "latest"
   ],
   "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",
   "license": "MIT",
