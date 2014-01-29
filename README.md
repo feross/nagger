@@ -1,13 +1,17 @@
-nagger
-===========
+# nagger
+[![NPM Version](http://img.shields.io/npm/v/nagger.svg)](https://npmjs.org/package/nagger)
+[![NPM](http://img.shields.io/npm/dm/nagger.svg)](https://npmjs.org/package/nagger)
+[![Gittip](http://img.shields.io/gittip/feross.svg)](https://www.gittip.com/feross/)
 
-Force the user to run the latest version of node.js (thru nagging)
+### Force the user to run the latest version of node.js (thru nagging)
 
-## Installation
+## install
 
-`npm install nagger`
+```
+npm install nagger
+```
 
-## Usage
+## usage
 
 ```js
 // Are we running the latest version of Node?
@@ -25,6 +29,6 @@ Prints out to the terminal:
 
 That's it!
 
-## License
+## license
 
-MIT
+MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
