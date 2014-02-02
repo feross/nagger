@@ -1,7 +1,7 @@
 # nagger
-[![NPM Version](http://img.shields.io/npm/v/nagger.svg)](https://npmjs.org/package/nagger)
-[![NPM](http://img.shields.io/npm/dm/nagger.svg)](https://npmjs.org/package/nagger)
-[![Gittip](http://img.shields.io/gittip/feross.svg)](https://www.gittip.com/feross/)
+[![NPM Version](http://img.shields.io/npm/v/nagger.png)](https://npmjs.org/package/nagger)
+[![NPM](http://img.shields.io/npm/dm/nagger.png)](https://npmjs.org/package/nagger)
+[![Gittip](http://img.shields.io/gittip/feross.png)](https://www.gittip.com/feross/)
 
 ### Force the user to run the latest version of node.js (thru nagging)
 
