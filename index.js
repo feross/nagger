@@ -2,9 +2,9 @@
 
 'use strict';
 
-const boxen = require('boxen');
-const colors = require('colors');
 const http = require('http');
+const boxen = require('boxen');
+const colors = require('colors/safe');
 
 const url = 'http://nodejs.org/dist/latest/SHASUMS256.txt';
 const currentVersion = process.versions.node;
