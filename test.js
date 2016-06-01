@@ -1,12 +1,11 @@
-import childProcess from 'child_process';
-import test from 'ava';
+var cp = require('child_process')
+var test = require('tape')
 
-test.cb(t => {
-	childProcess.execFile('./index.js', {
-		cwd: __dirname
-	}, (err, stdout) => {
-		t.ifError(err);
-		t.true(stdout.trim().length >= 0);
-		t.end();
-	});
-});
+test('sanity check', function (t) {
+  cp.execFile('./index.js', {
+    cwd: __dirname
+  }, (err, stdout) => {
+    t.error(err)
+    t.end()
+  })
+})

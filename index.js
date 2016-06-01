@@ -1,40 +1,29 @@
 #!/usr/bin/env node
 
-'use strict';
+var boxen = require('boxen')
+var get = require('simple-get')
+var chalk = require('chalk')
 
-const http = require('http');
-const boxen = require('boxen');
-const colors = require('colors/safe');
+var url = 'http://nodejs.org/dist/latest/SHASUMS256.txt'
+var currentVersion = process.versions.node
 
-const url = 'http://nodejs.org/dist/latest/SHASUMS256.txt';
-const currentVersion = process.versions.node;
+get.concat(url, function (err, res, body) {
+  if (err) {
+    console.log(chalk.red.bold('\n Nagger couldn\'t connect to nodejs.org to get the latest version.\n'))
+    console.error(err)
+    process.exitCode = 1
+    return
+  }
 
-http.get(url, res => {
-	let body = '';
-	res.on('data', chunk => {
-		body += chunk;
-	});
+  var latestVersion = /node-v(\d+\.\d+\.\d+)/.exec(body)
+  latestVersion = latestVersion && latestVersion[1]
 
-	res.on('end', () => {
-		let latestVersion = /node-v(\d+\.\d+\.\d+)/.exec(body);
-		latestVersion = latestVersion && latestVersion[1];
+  var currentMessage = chalk.green.bold(` Current : ${currentVersion}`)
+  var latestMessage = chalk.cyan.bold(` Latest : ${latestVersion}`)
 
-		const currentMessage = colors.green.bold(` Current : ${currentVersion}`);
-		const latestMessage = colors.cyan.bold(` Latest : ${latestVersion}`);
-
-		if (latestVersion) {
-			if (latestVersion !== currentVersion) {
-				console.log(colors.red.bold(boxen(colors.red.bold(` WARNING: Installed Node version is out-of-date \n\n${currentMessage}                ${latestMessage}`))));
-			}
-			if (latestVersion === currentVersion) {
-				console.log(colors.green(colors.cyan.bold(`\n Congrats! You are using the latest version of nodejs. \n`)));
-			}
-		} else {
-			console.log('rishi');
-		}
-	});
-}).on('error', err => {
-	console.log(colors.red.bold('\n Nagger couldn\'t connect to nodejs.org to get the latest version.\n'));
-	process.exit(1);
-	console.error(err);
-});
+  if (latestVersion !== currentVersion) {
+    console.log(chalk.red.bold(boxen(chalk.red.bold(
+      ` WARNING: Installed Node version is out-of-date \n\n${currentMessage}                ${latestMessage}`
+    ))))
+  }
+})
