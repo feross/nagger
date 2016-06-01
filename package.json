@@ -1,7 +1,7 @@
 {
   "name": "nagger",
   "description": "Force the user to run the latest version of node.js (thru nagging)",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",
   "bin": {
     "nagger": "index.js"
