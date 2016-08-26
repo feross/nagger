@@ -15,7 +15,7 @@
     "simple-get": "^2.1.0"
   },
   "devDependencies": {
-    "standard": "^7.1.1",
+    "standard": "*",
     "tape": "^4.5.1"
   },
   "files": [
