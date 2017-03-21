@@ -1,7 +1,13 @@
-# nagger
+# nagger [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
-[![npm](https://img.shields.io/npm/v/nagger.svg)](https://npmjs.org/package/nagger)
-[![Build Status](https://travis-ci.org/feross/nagger.svg?branch=master)](https://travis-ci.org/feross/nagger)
+[travis-image]: https://img.shields.io/travis/feross/nagger/master.svg
+[travis-url]: https://travis-ci.org/feross/nagger
+[npm-image]: https://img.shields.io/npm/v/nagger.svg
+[npm-url]: https://npmjs.org/package/nagger
+[downloads-image]: https://img.shields.io/npm/dm/nagger.svg
+[downloads-url]: https://npmjs.org/package/nagger
+[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[standard-url]: https://standardjs.com
 
 ### Force the user to run the latest version of node.js (thru nagging)
 
