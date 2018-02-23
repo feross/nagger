@@ -1,5 +1,7 @@
 # nagger [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feross/nagger.svg)](https://greenkeeper.io/)
+
 [travis-image]: https://img.shields.io/travis/feross/nagger/master.svg
 [travis-url]: https://travis-ci.org/feross/nagger
 [npm-image]: https://img.shields.io/npm/v/nagger.svg
