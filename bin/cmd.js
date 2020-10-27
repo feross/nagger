@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-var nagger = require('nagger')
+var nagger = require('../')
 
 nagger()
