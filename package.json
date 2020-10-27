@@ -8,7 +8,7 @@
     "url": "https://feross.org"
   },
   "bin": {
-    "nagger": "index.js"
+    "nagger": "bin/cmd.js"
   },
   "bugs": {
     "url": "https://github.com/feross/nagger/issues"
