@@ -10,8 +10,8 @@
     "url": "https://github.com/feross/nagger/issues"
   },
   "dependencies": {
-    "chalk": "^2.3.1",
     "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
     "simple-get": "^4.0.0"
   },
   "devDependencies": {
