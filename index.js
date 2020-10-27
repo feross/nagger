@@ -1,3 +1,4 @@
+/*! nagger. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 #!/usr/bin/env node
 
 var boxen = require('boxen')
