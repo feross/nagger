@@ -10,13 +10,13 @@
     "url": "https://github.com/feross/nagger/issues"
   },
   "dependencies": {
-    "boxen": "^4.1.0",
     "chalk": "^2.3.1",
+    "boxen": "^4.2.0",
     "simple-get": "^4.0.0"
   },
   "devDependencies": {
     "standard": "*",
-    "tape": "^5.0.0"
+    "tape": "^5.0.1"
   },
   "files": [
     "index.js"
